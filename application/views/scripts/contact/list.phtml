@@ -1,5 +1,5 @@
 <div class="container"> 
-	<div clas="form - group">
+	<div clas="form-group">
 		<div class="col-md-6 offset-md-3">
 			<table class="table table-bordered">
 				<thead>
@@ -19,8 +19,7 @@
 						echo "<td>" . $contact->email . "</td>";
 						echo "<td>" . $contact->telefone . "</td>";
 						echo "<td>" . $contact->endereco . "</td>";
-					}
-					echo "<a href='" . $this->url(array('controller' => 'contact', 'action'=>'adicionar')) . "'>Adicionar Contato</a>";							
+					}						
 				?>
 			</table>
 		</div>

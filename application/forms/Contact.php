@@ -6,7 +6,7 @@ class Application_Form_Contact extends Zend_Form {
           $this->addElement('text', 'email', array('label' => 'Digite seu email:','required' => true));
           $this->addElement('text', 'telefone', array('label' => 'Digite o numero do seu telefone:', 'required' => true));
           $this->addElement('text', 'endereco', array('label' => 'Digite seu endereco:','required' => true));
-          $this->addElement('submit','submit',array('label' => 'Add Contact'));
+          $this->addElement('submit','submit',array('label' => 'Criar Contato'));
      }
  
 }
