@@ -1,0 +1,31 @@
+<div class="container"> 
+	<div clas="form - group">
+		<div class="col-md-6 offset-md-3">
+			<table class="table table-bordered">
+				<thead>
+					<h1> Lista de contatos </h1>
+						<tr>
+							<th> Nome </th>
+							<th> Email </th>
+							<th> Telefone </th>
+							<th> Endereço </th>
+						</tr>
+				</thead>
+				<?php
+					foreach($this->Contact as $contact)
+					{
+						echo "<tr>";
+						echo "<td>" . $contact->nome . "</td>";
+						echo "<td>" . $contact->email . "</td>";
+						echo "<td>" . $contact->telefone . "</td>";
+						echo "<td>" . $contact->endereco . "</td>";
+					}
+					echo "<a href='" . $this->url(array('controller' => 'contact', 'action'=>'adicionar')) . "'>Adicionar Contato</a>";							
+				?>
+			</table>
+		</div>
+	</div>
+</div>
+				
+		
+

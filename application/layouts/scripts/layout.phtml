@@ -1,31 +1,59 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Contatos</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet">	  
+        <link href="css/style.css" rel="stylesheet">
+
+        <?php echo $this->headMeta() ?>
+
+        <?php $this->headScript()->appendFile($this->baseURL() . '/js/jquery.js') ?>
+        <?php $this->headScript()->appendFile($this->baseURL() . '/js/bootstrap.js') ?>
+        <?php $this->headScript()->appendFile($this->baseURL() . '/js/jquery-ui.js') ?>
+        <?php $this->headScript()->appendFile($this->baseURL() . '/js/jquery-ui-1.10.2.custom.js') ?>
+        <?php $this->headScript()->appendFile($this->baseURL() . '/js/jquery.maskedinput.js') ?>
+        <?php $this->headScript()->appendFile($this->baseURL() . '/js/html5shiv.js', 'text/javascript', array('conditional' => 'lt IE 9')) ?>
+
+        <?php echo $this->headScript() ?>
+
+        <?php $this->headLink()->appendStylesheet($this->baseURL() . '/css/jquery-ui.css', 'screen') ?>
+        <?php $this->headLink()->appendStylesheet($this->baseURL() . '/css/bootstrap.css', 'screen') ?>
+        <?php $this->headLink()->appendStylesheet($this->baseURL() . '/css/font-awesome.css', 'screen') ?>
+        <?php $this->headLink()->appendStylesheet($this->baseURL() . '/css/font-awesome-ie7.min.css', 'screen', 'IE 7') ?>
+        <?php $this->headLink()->appendStylesheet($this->baseURL() . '/css/global.css', 'screen') ?>
+        <?php $this->headLink()->appendStylesheet($this->baseURL() . '/css/bootstrap-responsive.css', 'screen') ?>
+
+        <?php echo $this->headLink() ?>
 </head>
 <body>
-    <nav class="navbar navbar-static-top" role="navigation">
-        <!-- MENU SUPERIOR -->
-        <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="#">
-                        Menu
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Contatos</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper cadastro">
-    <?php echo $this->layout()->content ?>
-</div><!-- /.content-wrapper -->
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Lista de Contatos</a>
+          </li>          
+        </ul>
+      </div>
+    </nav>
+    
+
+<div class="content">
+    <?php echo $this->layout()->content; ?>
+</div>
 
 <!-- RODAPÉ -->
 <footer class="main-footer">
-        <strong>Desenvolvido por IEPTB-TO - 2015-2016 <a target="_blank" href="http://www.ieptbto.com.br/">Módulo Protesto</a></strong>.
+        <strong>2018</strong>.
       </footer>
 </body>
 </html>
