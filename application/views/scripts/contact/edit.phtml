@@ -1,11 +1,12 @@
-<div class="container"> 
-	<form action=' ' method="Post" name="formulario" >
+<div class="container">
+<h1> Editar Contato </h1> 
+	<form action=' ' method="POST">
 		<div clas="form - group">
 			<div class="col-md-6 offset-md-3">
 				<?php echo $this->contactForm->getElement('nome')       ->setValue($this->contact->nome);?>
 				<?php echo $this->contactForm->getElement('email')      ->setValue($this->contact->email);?>                
 				<?php echo $this->contactForm->getElement('telefone')   ->setValue($this->contact->telefone);?>
-				<?php echo $this->contactForm->getElement('endereco')   ->setValue($this->contact->endereco);?>
+				<?php echo $this->contactForm->getElement('endereco')   ->setValue($this->contact->endereco);?><br/> 
 				<?php echo $this->contactForm->getElement('submit')     ->setlabel('Edit Contact');?>
 			</div>
 		</div>

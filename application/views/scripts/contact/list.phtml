@@ -22,8 +22,8 @@
 					echo "<td>" 			. $contact->email 		. "</td>";
 					echo "<td>" 			. $contact->telefone 	. "</td>";
 					echo "<td>" 			. $contact->endereco 	. "</td>";
-					echo "<td colspan='6'><a href='" . $this->url(array('controller' => 'contact', 'action'=>'edit', 'id'=>$contact->id)) . "'><i style='font-size: 1.5rem' class='fas fa-edit fa-fw'></i> </a>";
-					echo "<a href='" 				 . $this->url(array('controller' => 'contact', 'action' => 'delete', 'id' => $contact->id)) . "' onclick='return confirm(\"Deseja apagar esse Contato?\");'> <i style='font-size: 1.5rem' class='fas fa-trash-alt fa-fw'></i></a></td>";
+					echo "<td colspan='6'><a href='" . $this->url(array('controller' => 'contact', 'action'=>'edit', 'id'		=>$contact->id)) . "'><i style='font-size: 1.5rem' class='fas fa-edit fa-fw'></i></a>";
+					echo "<a href='" 				 . $this->url(array('controller' => 'contact', 'action' => 'delete', 'id'	=>$contact->id)) . "' onclick='return confirm(\"Deseja apagar esse Contato?\");'> <i style='font-size: 1.5rem' class='fas fa-trash-alt fa-fw'></i></a></td>";
 					echo "</tr>";
 				}
 										

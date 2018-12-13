@@ -1,11 +1,12 @@
 <div class="container">
+<h1> Cadastrar Contato </h1>
     <form action='' method="POST">
         <div clas="form - group">
             <div class="col-md-6 offset-md-3">
                 <?php echo $this->contactForm->getElement('nome');      ?>
                 <?php echo $this->contactForm->getElement('email');     ?>
                 <?php echo $this->contactForm->getElement('telefone');  ?>
-                <?php echo $this->contactForm->getElement('endereco');  ?>                
+                <?php echo $this->contactForm->getElement('endereco');  ?><br/>              
 				<?php echo $this->contactForm->getElement('submit');    ?>
             </div>
         </div>
