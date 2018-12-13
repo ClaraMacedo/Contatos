@@ -1,14 +1,13 @@
 <?php
-
-class Application_Model_DbTable_Contact extends Zend_Db_Table_Abstract{ 
-    protected $_nome = 'contato';
+class Contact extends Zend_Db_Table_Abstract {
+    protected $_name = 'contato';
     
     public function create(){
         $front = Zend_controller_Front::getInstance();
         $request = $front -> getRequest();
         $data = array(
-            'nome'  => $request->getPost('nome'),
-            'email'=> $request->getPost('email'),
+            'nome'     => $request->getPost('nome'),
+            'email'    => $request->getPost('email'),
             'telefone' => $request->getPost('telefone'),
             'endereco' => $request->getPost('endereco')
         );
@@ -16,3 +15,4 @@ class Application_Model_DbTable_Contact extends Zend_Db_Table_Abstract{
             //$this->insert($data);
     }
 }
+
