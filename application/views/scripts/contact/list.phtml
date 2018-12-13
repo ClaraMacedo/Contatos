@@ -1,28 +1,34 @@
 <div class="container"> 
 	<div clas="form-group">
-		<div class="col-md-6 offset-md-3">
-			<table class="table table-bordered">
-				<thead>
-					<h1> Lista de contatos </h1>
-						<tr>
-							<th> Nome </th>
-							<th> Email </th>
-							<th> Telefone </th>
-							<th> Endereço </th>
-						</tr>
-				</thead>
-				<?php
-					foreach($this->Contact as $contact)
-					{
-						echo "<tr>";
-						echo "<td>" . $contact->nome . "</td>";
-						echo "<td>" . $contact->email . "</td>";
-						echo "<td>" . $contact->telefone . "</td>";
-						echo "<td>" . $contact->endereco . "</td>";
-					}						
-				?>
-			</table>
-		</div>
+		<?php
+		echo "<a class='btn btn-primary float-right' role='button'  href='" . $this->url(array('controller' => 'contact', 'action'=>'create')) . "'>Criar Contato</a>";	
+		?>
+		<table class="table table-bordered">
+			<thead>
+				<h1> Lista de contatos </h1>
+					<tr>
+						<th scope="col"> Nome 		</th>
+						<th scope="col"> Email 		</th>
+						<th scope="col"> Telefone 	</th>
+						<th scope="col"> Endereco 	</th>
+						<th scope="col"> Acoes 		</th>
+					</tr>
+			</thead>
+			<?php
+				foreach($this->Contact as $contact)
+				{
+					echo "<tr>";
+					echo "<td>" 			. $contact->nome 		. "</td>";
+					echo "<td>" 			. $contact->email 		. "</td>";
+					echo "<td>" 			. $contact->telefone 	. "</td>";
+					echo "<td>" 			. $contact->endereco 	. "</td>";
+					echo "<td colspan='6'><a href='" . $this->url(array('controller' => 'contact', 'action'=>'edit', 'id'=>$contact->id)) . "'><i style='font-size: 1.5rem' class='fas fa-edit fa-fw'></i> </a>";
+					echo "<a href='" 				 . $this->url(array('controller' => 'contact', 'action' => 'delete', 'id' => $contact->id)) . "' onclick='return confirm(\"Deseja apagar esse Contato?\");'> <i style='font-size: 1.5rem' class='fas fa-trash-alt fa-fw'></i></a></td>";
+					echo "</tr>";
+				}
+										
+			?>
+		</table>			
 	</div>
 </div>
 				

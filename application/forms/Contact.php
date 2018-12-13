@@ -36,8 +36,8 @@ class Application_Form_Contact extends Zend_Form {
           $submit -> setAttrib('id', 'submit');
           $submit -> clearDecorators();
           $submit -> setDecorators(array('ViewHelper'));
-          $nome   ->setAttrib('type', 'submit');
-          $submit ->setAttrib('class', 'btn btn-default');
+          $nome   -> setAttrib('type', 'submit');
+          $submit -> setAttrib('class', 'btn btn-primary float-right');
      
           $this->addElements(array($nome, $email, $telefone, $endereco, $submit));
  
